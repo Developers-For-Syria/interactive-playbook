@@ -171,6 +171,16 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-cairo);
+    direction: rtl;
+    text-align: right;
+  }
+  input, textarea, select {
+    direction: rtl;
+    text-align: right;
+  }
+  h1, h2, h3, h4, h5, h6, p, span, div {
+    direction: rtl;
+    text-align: inherit;
   }
 }
 
@@ -185,9 +195,11 @@
   display: inline-block;
   white-space: nowrap;
   word-wrap: normal;
-  direction: ltr;
+  direction: ltr !important;
+  unicode-bidi: isolate;
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 /* Range slider styling */
