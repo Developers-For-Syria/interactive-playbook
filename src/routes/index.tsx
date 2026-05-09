@@ -150,6 +150,26 @@ function Index() {
           </button>
         </nav>
       )}
+
+      {/* Floating WhatsApp Button */}
+      <a
+        href="https://wa.me/4915750042211"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-[70] w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 active:scale-95"
+        aria-label="تواصل معنا عبر واتساب"
+      >
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="white"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.221-.347.273-.521.045-.174-.149-.671-.735-.943-1.006-.272-.272-.545-.223-.671-.134-.126.089-.521.521-.644.671-.123.149-.247.174-.444.024-.197-.149-.834-.408-1.589-1.006-.595-.521-1.028-1.166-1.151-1.463-.123-.297-.012-.458.111-.606.123-.149.272-.347.445-.521.173-.174.322-.445.521-.735.199-.29.099-.545.045-.671-.05-.126-.149-.545-.667-.735-1.012-.19-.345-.347-.297-.471-.297-.124 0-.247.012-.371.018-.124.006-.297.05-.445.247-.149.197-.594.595-.594 1.412 0 .817.594 1.511.671 1.663.077.149.1.297.149.297s1.413 3.414 4.865 4.657c3.452 1.243 3.452.829 4.073.829.621 0 1.788-.247 2.039-.483.251-.237.445-.595.445-.829 0-.149-.012-.322-.012-.496z"/>
+          <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm6.936 17.115c-.262.658-.966 1.205-1.653 1.378-.424.108-1.38.197-2.842-.297-2.462-.494-5.197-2.014-7.418-4.865-2.221-2.851-2.936-5.596-2.936-6.342 0-.746.197-1.511.521-2.046.324-.535.834-.829 1.413-.829.324 0 .648.074.972.223.324.149.648.297.972.446.324.149.648.297.972.149.324-.149.648-.297.972-.446.324-.149.648-.297.972-.446.324-.149.648-.223.972-.223.579 0 1.089.297 1.413.829.324.535.521 1.3.521 2.046 0 .746-.715 3.491-2.936 6.342-2.221 2.851-4.956 4.371-7.418 4.865-1.462.494-2.418.405-2.842.297-.687-.173-1.391-.72-1.653-1.378z"/>
+        </svg>
+      </a>
     </div>
   );
 }
@@ -157,42 +177,42 @@ function Index() {
 // --- Intro Step ---
 function IntroStep({ onNext }: { onNext: () => void }) {
   return (
-    <div className="w-full min-h-[calc(100vh-200px)] flex flex-col">
+    <div className="w-full min-h-[calc(100vh-200px)] flex flex-col px-4">
       {/* Hero Section */}
-      <div className="text-right mb-8">
+      <div className="text-right mb-6">
         <div className="flex items-center gap-3 mb-4">
-          <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+          <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center text-white text-lg sm:text-2xl font-bold shadow-lg">
             TC
           </div>
           <div>
-            <h1 className="text-2xl font-extrabold" style={{ color: C.primaryContainer }}>فريق TCNS</h1>
-            <p className="text-sm font-semibold" style={{ color: C.textMuted }}>للياقة البدنية والتغذية</p>
+            <h1 className="text-lg sm:text-xl lg:text-2xl font-extrabold" style={{ color: C.primaryContainer }}>فريق TCNS</h1>
+            <p className="text-xs sm:text-sm font-semibold" style={{ color: C.textMuted }}>للياقة البدنية والتغذية</p>
           </div>
         </div>
-        <h2 className="text-xl font-bold mb-4" style={{ color: C.textPrimary }}>مرحباً بك في فريق TCNS</h2>
+        <h2 className="text-base sm:text-lg lg:text-xl font-bold mb-4" style={{ color: C.textPrimary }}>مرحباً بك في فريق TCNS</h2>
       </div>
 
       {/* Coach Info */}
-      <div className="bg-white rounded-2xl p-6 border shadow-sm mb-6" style={{ borderColor: C.cardBorder }}>
-        <div className="flex items-start gap-4 mb-4">
-          <div className="w-20 h-20 rounded-full overflow-hidden shrink-0">
+      <div className="bg-white rounded-2xl p-4 sm:p-6 border shadow-sm mb-6" style={{ borderColor: C.cardBorder }}>
+        <div className="flex items-start gap-3 sm:gap-4 mb-4">
+          <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden shrink-0">
             <img src="/images/success.png" alt="نادر العثمان" className="w-full h-full object-cover" />
           </div>
-          <div className="text-right">
-            <h3 className="text-lg font-bold" style={{ color: C.textPrimary }}>نادر العثمان</h3>
-            <p className="text-sm font-semibold" style={{ color: C.textSecondary }}>مدرب كمال أجسام ولياقة بدنية معتمد</p>
+          <div className="text-right flex-1">
+            <h3 className="text-base sm:text-lg font-bold" style={{ color: C.textPrimary }}>نادر العثمان</h3>
+            <p className="text-xs sm:text-sm font-semibold" style={{ color: C.textSecondary }}>مدرب كمال أجسام ولياقة بدنية معتمد</p>
             <p className="text-xs font-medium mt-1" style={{ color: C.textMuted }}>خبرة 10+ سنوات</p>
           </div>
         </div>
-        <p className="text-sm leading-relaxed text-right" style={{ color: C.textSecondary }}>
+        <p className="text-xs sm:text-sm leading-relaxed text-right" style={{ color: C.textSecondary }}>
           بدأت رحلتي كلاعب بطولات البوكسينغ والجمنازيوم بعدها طورت نفسي بالدراسة والتخصص في مجال التدريب والتغذية لأحول شغفي إلى أسلوب حياة ومهنة أساعد فيها غيري
         </p>
       </div>
 
       {/* Achievements */}
       <div className="mb-6">
-        <h3 className="text-lg font-bold mb-4 text-right" style={{ color: C.textPrimary }}>خلال مسيرتي اشتغلت مع أكثر من 300 شخص وقدرنا نحقق:</h3>
-        <div className="grid grid-cols-2 gap-3">
+        <h3 className="text-base sm:text-lg font-bold mb-4 text-right" style={{ color: C.textPrimary }}>خلال مسيرتي اشتغلت مع أكثر من 300 شخص وقدرنا نحقق:</h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
           {[
             { emoji: '💪', text: 'تحسين الشكل وبناء الجسم' },
             { emoji: '🔥', text: 'خسارة الدهون بشكل صحي' },
@@ -201,17 +221,17 @@ function IntroStep({ onNext }: { onNext: () => void }) {
             { emoji: '🌟', text: 'تحسين نمط الحياة' },
             { emoji: '🏆', text: 'تجنب حلول قاسية مثل العمليات' },
           ].map((item, i) => (
-            <div key={i} className="bg-white rounded-xl p-3 border flex items-center gap-2" style={{ borderColor: C.cardBorder }}>
-              <span className="text-xl">{item.emoji}</span>
-              <span className="text-xs font-semibold" style={{ color: C.textSecondary }}>{item.text}</span>
+            <div key={i} className="bg-white rounded-xl p-2 sm:p-3 border flex items-center gap-2" style={{ borderColor: C.cardBorder }}>
+              <span className="text-lg sm:text-xl">{item.emoji}</span>
+              <span className="text-xs sm:text-sm font-semibold" style={{ color: C.textSecondary }}>{item.text}</span>
             </div>
           ))}
         </div>
       </div>
 
       {/* Team Section */}
-      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-5 border mb-6" style={{ borderColor: C.primaryLight }}>
-        <h3 className="text-base font-bold mb-3 text-right" style={{ color: C.primaryContainer }}>فريق TCNS المتكامل يضم:</h3>
+      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-4 sm:p-5 border mb-6" style={{ borderColor: C.primaryLight }}>
+        <h3 className="text-sm sm:text-base font-bold mb-3 text-right" style={{ color: C.primaryContainer }}>فريق TCNS المتكامل يضم:</h3>
         <div className="space-y-2">
           {[
             { icon: 'medical_services', text: 'دكتور عام لمتابعة الحالة الصحية' },
@@ -219,16 +239,16 @@ function IntroStep({ onNext }: { onNext: () => void }) {
             { icon: 'monitoring', text: 'دكتوراة عامة لمتابعة شاملة' },
           ].map((item, i) => (
             <div key={i} className="flex items-center gap-2">
-              <span className="material-symbols-outlined text-sm" style={{ color: C.primaryContainer }}>{item.icon}</span>
-              <span className="text-sm font-semibold" style={{ color: C.textSecondary }}>{item.text}</span>
+              <span className="material-symbols-outlined text-xs sm:text-sm" style={{ color: C.primaryContainer }}>{item.icon}</span>
+              <span className="text-xs sm:text-sm font-semibold" style={{ color: C.textSecondary }}>{item.text}</span>
             </div>
           ))}
         </div>
       </div>
 
       {/* CTA Section */}
-      <div className="bg-white rounded-2xl p-6 border shadow-sm mb-6 text-right" style={{ borderColor: C.cardBorder }}>
-        <h3 className="text-lg font-bold mb-4" style={{ color: C.textPrimary }}>شو رح تاخذ معنا؟</h3>
+      <div className="bg-white rounded-2xl p-4 sm:p-6 border shadow-sm mb-6 text-right" style={{ borderColor: C.cardBorder }}>
+        <h3 className="text-base sm:text-lg font-bold mb-4" style={{ color: C.textPrimary }}>شو رح تاخذ معنا؟</h3>
         <div className="space-y-3">
           {[
             'برنامج تدريبي مخصص حسب هدفك',
@@ -237,8 +257,8 @@ function IntroStep({ onNext }: { onNext: () => void }) {
             'توجيه ودعم خلال رحلتك',
           ].map((item, i) => (
             <div key={i} className="flex items-center gap-3">
-              <span className="w-6 h-6 rounded-full flex items-center justify-center text-white text-sm font-bold" style={{ backgroundColor: C.primaryContainer }}>✓</span>
-              <span className="text-sm font-semibold" style={{ color: C.textSecondary }}>{item}</span>
+              <span className="w-5 h-5 sm:w-6 sm:h-6 rounded-full flex items-center justify-center text-white text-xs sm:text-sm font-bold" style={{ backgroundColor: C.primaryContainer }}>✓</span>
+              <span className="text-xs sm:text-sm font-semibold" style={{ color: C.textSecondary }}>{item}</span>
             </div>
           ))}
         </div>
@@ -246,7 +266,7 @@ function IntroStep({ onNext }: { onNext: () => void }) {
 
       {/* Final Message */}
       <div className="text-right mb-8">
-        <p className="text-sm leading-relaxed" style={{ color: C.textSecondary }}>
+        <p className="text-xs sm:text-sm leading-relaxed" style={{ color: C.textSecondary }}>
           <strong style={{ color: C.textPrimary }}>قبل ما نبدأ:</strong> الأسئلة التالية مهمة جداً لأنها تساعدنا نفهم وضعك الحالي ونحدد أفضل خطة لك بدقة. كل ماكانت إجاباتك أوضح وصريحة كل ماكانت نتيجتك معنا أفضل
         </p>
       </div>
@@ -255,11 +275,11 @@ function IntroStep({ onNext }: { onNext: () => void }) {
       <div className="mt-auto">
         <button 
           onClick={onNext}
-          className="w-full rounded-full py-4 flex justify-center items-center gap-2 font-bold text-lg text-white hover:brightness-110 transition-all shadow-lg shadow-blue-200 active:scale-[0.98]"
+          className="w-full rounded-full py-3 sm:py-4 flex justify-center items-center gap-2 font-bold text-base sm:text-lg text-white hover:brightness-110 transition-all shadow-lg shadow-blue-200 active:scale-[0.98]"
           style={{ backgroundColor: C.primaryContainer, fontFamily: "'Lexend', sans-serif" }}
         >
-          <span>عبي البيانات وخليّنا نبلش رحلتك</span>
-          <span className="material-symbols-outlined">arrow_back</span>
+          <span className="text-sm sm:text-base">عبي البيانات وخليّنا نبلش رحلتك</span>
+          <span className="material-symbols-outlined text-lg sm:text-xl">arrow_back</span>
         </button>
       </div>
     </div>
