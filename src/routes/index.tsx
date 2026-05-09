@@ -152,22 +152,19 @@ function Index() {
       )}
 
       {/* Floating WhatsApp Button */}
-      <div className="fixed bottom-6 right-6 z-[70] flex items-center gap-2 sm:gap-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 active:scale-95 px-3 sm:px-4 py-2">
-        <span className="text-xs sm:text-sm font-semibold text-gray-700 whitespace-nowrap hidden sm:inline">تواصل معي</span>
-        <a
-          href="https://wa.me/4915750042211"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-10 h-10 sm:w-10 sm:h-10 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center transition-all duration-300"
-          aria-label="تواصل معنا عبر واتساب"
-        >
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-            alt="WhatsApp"
-            className="w-5 h-5 sm:w-6 sm:h-6"
-          />
-        </a>
-      </div>
+      <a
+        href="https://wa.me/4915750042211"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-[70] w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 active:scale-95"
+        aria-label="تواصل معنا عبر واتساب"
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+          alt="WhatsApp"
+          className="w-8 h-8"
+        />
+      </a>
     </div>
   );
 }
